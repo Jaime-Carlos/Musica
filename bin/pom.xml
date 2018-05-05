@@ -11,7 +11,7 @@
     <name>Musica</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>sample.Main</mainClass>
+        <mainClass>Controller.Main</mainClass>
     </properties>
     <build>
         <plugins>
