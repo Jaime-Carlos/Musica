@@ -13,9 +13,17 @@ import java.util.Date;
  * @author Asus-PC
  */
 public class Album {
-    private ArrayList<Artista> artistas=new ArrayList<>();
-    private ArrayList<Cancion> cansiones=new ArrayList<>();
     private String titulo;
-    private Date publicacion;
-    
+
+    public Album(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }
