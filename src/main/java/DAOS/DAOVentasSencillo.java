@@ -2,6 +2,7 @@ package DAOS;
 
 import Modelo.VentasSencillo;
 import java.sql.*;
+import java.sql.Date;
 import java.util.*;
 public class DAOVentasSencillo {
     public boolean create(VentasSencillo ventaDeSencillo) {
@@ -24,7 +25,7 @@ public class DAOVentasSencillo {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, ventaDeSencillo.getNumeroDeCompras());
             preparedStatement.setString(2, ventaDeSencillo.getCancionSencillo().getTituloCancion().getTitulo());
-            preparedStatement.setString(3, ventaDeSencillo.getFechaDeCompra());
+            preparedStatement.setDate(3, Date.valueOf(ventaDeSencillo.getFechaDeCompra()));
             preparedStatement.execute();
             preparedStatement.close();
             stmt.close();

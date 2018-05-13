@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.Properties;
-
+import java.sql.*;
 public class DAOVentasAlbum {
     public boolean create(VentasAlbum ventadeAlbum) {
         Statement stmt = null;
@@ -30,7 +30,7 @@ public class DAOVentasAlbum {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, ventadeAlbum.getNumeroDeCompras());
             preparedStatement.setString(2, ventadeAlbum.getTituloDelAlbum().getTitulo());
-            preparedStatement.setString(3, ventadeAlbum.getFechaDeCompra());
+            preparedStatement.setDate(3, Date.valueOf(ventadeAlbum.getFechaDeCompra()));
             preparedStatement.execute();
             preparedStatement.close();
             stmt.close();

@@ -10,16 +10,18 @@ public class ReporteAlbum {
     private int numeroDeReporte;
     private Album tituloDelAlbum;
     private Artista nombreDelArtista;
+    private int posicion;
     private int posicionAnterior;
     private int aparicionesEnReportesAnteriores;
     private Date fechaIncioDelReporte;
     private Date fechaFinalDelReporte;
     protected SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
 
-    public ReporteAlbum(int numeroDeReporte, Album tituloDelAlbum, Artista nombreDelArtista, int posicionAnterior, int aparicionesEnReportesAnteriores, String fechaIncioDelReporte, String fechaFinalDelReporte) {
+    public ReporteAlbum(int numeroDeReporte, Album tituloDelAlbum, Artista nombreDelArtista,int posicion, int posicionAnterior, int aparicionesEnReportesAnteriores, String fechaIncioDelReporte, String fechaFinalDelReporte) {
         this.numeroDeReporte = numeroDeReporte;
         this.tituloDelAlbum = tituloDelAlbum;
         this.nombreDelArtista = nombreDelArtista;
+        this.posicion=posicion;
         this.posicionAnterior = posicionAnterior;
         this.aparicionesEnReportesAnteriores = aparicionesEnReportesAnteriores;
         try {
@@ -28,6 +30,14 @@ public class ReporteAlbum {
         }catch (ParseException e){
             e.printStackTrace();
         }
+    }
+
+    public int getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
     }
 
     public int getNumeroDeReporte() {
@@ -92,5 +102,19 @@ public class ReporteAlbum {
         }catch (ParseException e){
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ReporteAlbum{" +
+                "numeroDeReporte=" + numeroDeReporte +
+                ", tituloDelAlbum=" + tituloDelAlbum.getTitulo() +
+                ", nombreDelArtista=" + nombreDelArtista.getNombre() +
+                ", posicion=" + posicion +
+                ", posicionAnterior=" + posicionAnterior +
+                ", aparicionesEnReportesAnteriores=" + aparicionesEnReportesAnteriores +
+                ", fechaIncioDelReporte=" + sdf.format(fechaIncioDelReporte) +
+                ", fechaFinalDelReporte=" + sdf.format(fechaFinalDelReporte) +
+                '}';
     }
 }
