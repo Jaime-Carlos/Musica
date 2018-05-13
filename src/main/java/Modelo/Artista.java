@@ -12,32 +12,17 @@ import java.util.ArrayList;
  * @author Asus-PC
  */
 public class Artista {
-    private ArrayList<Cancion> sencillos=new ArrayList<>();
-    private ArrayList<Album> albums=new ArrayList<>();
     private String Nombre;
 
-    public ArrayList<Cancion> getSencillos() {
-        return sencillos;
-    }
-
-    public void setSencillos(ArrayList<Cancion> sencillos) {
-        this.sencillos = sencillos;
-    }
-
-    public ArrayList<Album> getAlbums() {
-        return albums;
-    }
-
-    public void setAlbums(ArrayList<Album> albums) {
-        this.albums = albums;
+    public Artista(String nombre) {
+        Nombre = nombre;
     }
 
     public String getNombre() {
         return Nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        Nombre = nombre;
     }
-    
 }
