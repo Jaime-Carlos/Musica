@@ -35,6 +35,7 @@ public class DAOReporteAlbum {
         return apariciones;
     }
 
+    //Funcion encargada de extraer cuando fue el ultimo corte
     public String FechaFinCorteAnterior() {
         connectDB();
         String fechaFinCorteAnterior = new String();
@@ -54,6 +55,7 @@ public class DAOReporteAlbum {
         return fechaFinCorteAnterior;
     }
 
+    //Funcion encargada de traer cual es el numero de la ultima lista realizada
     public int ultimoNumerodeCorte() {
         connectDB();
         int utimoNumeroDeCorte = -1;
@@ -73,6 +75,7 @@ public class DAOReporteAlbum {
         return utimoNumeroDeCorte;
     }
 
+    //Funcion axuiliar consulta el corte anterior para traer informacion que es necesaria para crear el nuevo corte
     public List<ReporteAlbum> ConsultarCorte(String FechaNuevoCorte) {
         List<ReporteAlbum> reporteAlbums = new ArrayList<>();
         int ultimoReporte = ultimoNumerodeCorte();
@@ -102,6 +105,7 @@ public class DAOReporteAlbum {
         return reporteAlbums;
     }
 
+    //Funcion para conectar a la base de datos
     protected void connectDB() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -120,6 +124,7 @@ public class DAOReporteAlbum {
         }
     }
 
+    //Busca en que posicion quedo el titulo de album ingresado en el reporte anterior
     public int puestoAnterior(String tituloAlbum) {
         int puestoAnterior = 0;
         int ultimoCorte = ultimoNumerodeCorte();
@@ -140,6 +145,7 @@ public class DAOReporteAlbum {
         return puestoAnterior;
     }
 
+    //Inserta el Reporte(Lista)
     public void generarReporte(List<ReporteAlbum> reporteAlbums) {
         connectDB();
         try {
@@ -165,6 +171,7 @@ public class DAOReporteAlbum {
         }
     }
 
+    //Lista un corte especifico
     public List<ReporteAlbum> listarCorte(int numeroDeCorte) {
         List<ReporteAlbum> reportesDeAlbumes = new ArrayList<>();
         connectDB();

@@ -34,21 +34,21 @@ public class DAOAlbum {
         }
     }
 
-    public List<Album> listarAlbumes(){
-        List<Album> listaDeAlbumes=new ArrayList<>();
+    public List<Album> listarAlbumes() {
+        List<Album> listaDeAlbumes = new ArrayList<>();
         connectDB();
         try {
             stmt = conn.createStatement();
             String sql = "select NombreAlbum from Album";
-            ResultSet rs=stmt.executeQuery(sql);
-            while(rs.next()){
-                String tituloAlbum=rs.getString("NombreAlbum");
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                String tituloAlbum = rs.getString("NombreAlbum");
                 listaDeAlbumes.add(new Album(tituloAlbum));
             }
             rs.close();
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return listaDeAlbumes;
