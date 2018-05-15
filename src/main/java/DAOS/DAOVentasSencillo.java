@@ -24,7 +24,7 @@ public class DAOVentasSencillo {
                     + "VALUES (?,?,?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, ventaDeSencillo.getNumeroDeCompras());
-            preparedStatement.setString(2, ventaDeSencillo.getCancionSencillo().getTituloCancion().getTitulo());
+            preparedStatement.setString(2, ventaDeSencillo.getCancionSencillo().getTitulo());
             preparedStatement.setDate(3, Date.valueOf(ventaDeSencillo.getFechaDeCompra()));
             preparedStatement.execute();
             preparedStatement.close();

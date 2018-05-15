@@ -6,10 +6,10 @@ import java.util.Date;
 
 public class VentasSencillo {
     private int numeroDeCompras;
-    private Sencillo CancionSencillo;
+    private Cancion CancionSencillo;
     private Date fechaDeCompra;
     protected SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
-    public VentasSencillo(int numeroDeCompras, Sencillo CancionSencillo, String fechaDeCompra) {
+    public VentasSencillo(int numeroDeCompras, Cancion CancionSencillo, String fechaDeCompra) {
         this.numeroDeCompras = numeroDeCompras;
         this.CancionSencillo = CancionSencillo;
         try {
@@ -38,11 +38,11 @@ public class VentasSencillo {
         this.numeroDeCompras = numeroDeCompras;
     }
 
-    public Sencillo getCancionSencillo() {
+    public Cancion getCancionSencillo() {
         return CancionSencillo;
     }
 
-    public void setCancionSencillo(Sencillo CancionSencillo) {
+    public void setCancionSencillo(Cancion CancionSencillo) {
         this.CancionSencillo = CancionSencillo;
     }
 }

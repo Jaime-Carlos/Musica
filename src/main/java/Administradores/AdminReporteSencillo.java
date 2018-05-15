@@ -35,7 +35,7 @@ public class AdminReporteSencillo {
     }
 
     //Lista un corte especifico
-    public List<ReporteSencillo> listarAlbumesReporte(int numeroDeReporte) {
+    public List<ReporteSencillo> listarSencillosReporte(int numeroDeReporte) {
         return daoReporteSencillo.listarCorte(numeroDeReporte);
     }
 

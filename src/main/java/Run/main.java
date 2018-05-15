@@ -33,6 +33,13 @@ public class main {
 //            System.out.println(cancions.get(i).getTitulo());
 //        }
         AdminReporteSencillo adminReporteSencillo=new AdminReporteSencillo();
-        adminReporteSencillo.listarAlbumesReporte(0);
+        //adminReporteSencillo.generarReporte("2018-02-13");
+        List<ReporteSencillo> reporteSencillos=adminReporteSencillo.listarSencillosReporte(1);
+        for(int i=0;i<reporteSencillos.size();i++){
+           System.out.println(reporteSencillos.get(i).getTituloCancion().getTitulo());
+        }
+        DAOVentasSencillo daoVentasSencillo=new DAOVentasSencillo();
+        //daoVentasSencillo.create(new VentasSencillo(10,new Cancion("Yerbatero"),"2018-01-10"));
+
     }
 }

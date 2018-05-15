@@ -60,7 +60,7 @@ public class DAOReporteSencillo {
         int utimoNumeroDeCorte = -1;
         try {
             stmt = conn.createStatement();
-            String sql = "select NumerodeLista from CorteAlbum order by FechaFinal desc limit 1";
+            String sql = "select NumerodeLista from CorteSencillo order by FechaFinal desc limit 1";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 utimoNumeroDeCorte = (rs.getInt("NumerodeLista"));
@@ -82,8 +82,7 @@ public class DAOReporteSencillo {
         connectDB();
         try {
             stmt = conn.createStatement();
-            String sql = "select NombreCancion,NombreArtista,Ventas from((select Cancion,sum(Ventas) as Ventas,(strftime('%Y-%m-%d', FechaCompra / 1000, 'unixepoch'))as FechaCompra from VentasSencillo where FechaCompra>='"+finFechaCorteAnterior+"' and FechaCompra<'"+fechaNuevoCorte+"' group by (Cancion)" +
-                    "))join Sencillo where NombreCancion=Cancion group by NombreCancion order by Ventas desc";
+            String sql = "select NombreCancion,NombreArtista,Ventas from((select Cancion,sum(Ventas) as Ventas,(strftime('%Y-%m-%d', FechaCompra / 1000, 'unixepoch'))as FechadeCompra from VentasSencillo where FechadeCompra>='"+finFechaCorteAnterior+"' and FechadeCompra<'"+fechaNuevoCorte+"' group by (Cancion)))join Sencillo where NombreCancion=Cancion group by NombreCancion order by Ventas desc";
             ResultSet rs = stmt.executeQuery(sql);
             int i = 1;
             while (rs.next()) {
