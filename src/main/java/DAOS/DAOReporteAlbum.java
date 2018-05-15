@@ -12,93 +12,98 @@ import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
 public class DAOReporteAlbum {
-    protected Connection conn=null;
+    protected Connection conn = null;
     protected Statement stmt = null;
-    protected Properties props=null;
-    public int aparecicionesenreportesAnteriores(String tituloAlbum){
-        int apariciones=-1;
+    protected Properties props = null;
+
+    public int aparecicionesenreportesAnteriores(String tituloAlbum) {
+        int apariciones = -1;
         connectDB();
-        try{
+        try {
             stmt = conn.createStatement();
-            String sql = "select Count(NombreAlbum) as AparicionesAnteriores from CorteAlbum where NombreAlbum='"+tituloAlbum+"'";
-            ResultSet rs=stmt.executeQuery(sql);
-            while(rs.next()){
-                apariciones=(rs.getInt("AparicionesAnteriores"));
+            String sql = "select Count(NombreAlbum) as AparicionesAnteriores from CorteAlbum where NombreAlbum='" + tituloAlbum + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                apariciones = (rs.getInt("AparicionesAnteriores"));
             }
             rs.close();
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return apariciones;
     }
-    public String FechaFinCorteAnterior(){
+
+    public String FechaFinCorteAnterior() {
         connectDB();
-        String fechaFinCorteAnterior=new String();
+        String fechaFinCorteAnterior = new String();
         try {
             stmt = conn.createStatement();
             String sql = "select FechaFinal from CorteAlbum order by FechaFinal desc limit 1";
-            ResultSet rs=stmt.executeQuery(sql);
-            while(rs.next()){
-                fechaFinCorteAnterior=(rs.getDate("FechaFinal")).toString();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                fechaFinCorteAnterior = (rs.getDate("FechaFinal")).toString();
             }
             rs.close();
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return fechaFinCorteAnterior;
     }
-    public int ultimoNumerodeCorte(){
+
+    public int ultimoNumerodeCorte() {
         connectDB();
-        int utimoNumeroDeCorte=-1;
+        int utimoNumeroDeCorte = -1;
         try {
             stmt = conn.createStatement();
             String sql = "select NumerodeLista from CorteAlbum order by FechaFinal desc limit 1";
-            ResultSet rs=stmt.executeQuery(sql);
-            while(rs.next()){
-                utimoNumeroDeCorte=(rs.getInt("NumerodeLista"));
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                utimoNumeroDeCorte = (rs.getInt("NumerodeLista"));
             }
             rs.close();
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return utimoNumeroDeCorte;
     }
-    public List ConsultarCorte(String FechaNuevoCorte){
-        List<ReporteAlbum> reporteAlbums=new ArrayList<>();
-        int ultimoReporte=ultimoNumerodeCorte();
-        String finFechaCorteAnterior=FechaFinCorteAnterior();
+
+    public List<ReporteAlbum> ConsultarCorte(String FechaNuevoCorte) {
+        List<ReporteAlbum> reporteAlbums = new ArrayList<>();
+        int ultimoReporte = ultimoNumerodeCorte();
+        String finFechaCorteAnterior = FechaFinCorteAnterior();
         connectDB();
-        try{
+        try {
             stmt = conn.createStatement();
-            String sql = "select NombreAlbum,NombreArtista,Ventas from((select NombreAlbum,sum(Ventas) as Ventas,(strftime('%Y-%m-%d', FechaDeCompra / 1000, 'unixepoch'))as FechaCompra from VentasAlbum where FechaCompra>='"+finFechaCorteAnterior+"' and FechaCompra<'"+FechaNuevoCorte+"' group by (NombreAlbum)))join Completo using (NombreAlbum) group by NombreAlbum order by Ventas desc ";
-            ResultSet rs=stmt.executeQuery(sql);
-            int i=1;
-            while(rs.next()){
-                String NombreAlbum=rs.getString("NombreAlbum");
-                String NombreArtista=rs.getString("NombreArtista");
-                int Ventas=rs.getInt("Ventas");
-                Album album=new Album(NombreAlbum);
-                Artista artista=new Artista(NombreArtista);
-                ReporteAlbum reporteAlbum=new ReporteAlbum(ultimoReporte+1,album,artista,i,0,0,finFechaCorteAnterior,FechaNuevoCorte);
+            String sql = "select NombreAlbum,NombreArtista,Ventas from((select NombreAlbum,sum(Ventas) as Ventas,(strftime('%Y-%m-%d', FechaDeCompra / 1000, 'unixepoch'))as FechaCompra from VentasAlbum where FechaCompra>='" + finFechaCorteAnterior + "' and FechaCompra<'" + FechaNuevoCorte + "' group by (NombreAlbum)))join Completo using (NombreAlbum) group by NombreAlbum order by Ventas desc ";
+            ResultSet rs = stmt.executeQuery(sql);
+            int i = 1;
+            while (rs.next()) {
+                String NombreAlbum = rs.getString("NombreAlbum");
+                String NombreArtista = rs.getString("NombreArtista");
+                int Ventas = rs.getInt("Ventas");
+                Album album = new Album(NombreAlbum);
+                Artista artista = new Artista(NombreArtista);
+                ReporteAlbum reporteAlbum = new ReporteAlbum(ultimoReporte + 1, album, artista, i, 0, 0, finFechaCorteAnterior, FechaNuevoCorte);
                 reporteAlbums.add(reporteAlbum);
                 i++;
             }
             rs.close();
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return reporteAlbums;
     }
-    protected void connectDB(){
-        try{
+
+    protected void connectDB() {
+        try {
             Class.forName("org.sqlite.JDBC");
             String url = "jdbc:sqlite:MusicaDB";
             props = new Properties();
@@ -110,26 +115,26 @@ public class DAOReporteAlbum {
             props.setProperty("useLegacyDatetimeCode", "false");
             props.setProperty("serverTimezone", "UTF-8");
             conn = DriverManager.getConnection(url, props);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public int puestoAnterior(String tituloAlbum) {
-        int puestoAnterior=0;
-        int ultimoCorte=ultimoNumerodeCorte();
+        int puestoAnterior = 0;
+        int ultimoCorte = ultimoNumerodeCorte();
         connectDB();
-        try{
+        try {
             stmt = conn.createStatement();
-            String sql = "select * from CorteAlbum where NumerodeLista='"+ultimoCorte+"' and NombreAlbum='"+tituloAlbum+"'";
-            ResultSet rs=stmt.executeQuery(sql);
-            while(rs.next()){
-                puestoAnterior=rs.getInt("Posicion");
+            String sql = "select * from CorteAlbum where NumerodeLista='" + ultimoCorte + "' and NombreAlbum='" + tituloAlbum + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                puestoAnterior = rs.getInt("Posicion");
             }
             rs.close();
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return puestoAnterior;
@@ -137,9 +142,9 @@ public class DAOReporteAlbum {
 
     public void generarReporte(List<ReporteAlbum> reporteAlbums) {
         connectDB();
-        try{
+        try {
             stmt = conn.createStatement();
-            for (int i=0;i<reporteAlbums.size();i++) {
+            for (int i = 0; i < reporteAlbums.size(); i++) {
                 String sql = "INSERT INTO cortealbum (NumerodeLista,Posicion,NombreAlbum,FechaInico,FechaFinal,VecesQueHaAparecido,PosicionAnterior) "
                         + "VALUES (?,?,?,?,?,?,?)";
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -155,8 +160,35 @@ public class DAOReporteAlbum {
             }
             stmt.close();
             conn.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public List<ReporteAlbum> listarCorte(int numeroDeCorte) {
+        List<ReporteAlbum> reportesDeAlbumes = new ArrayList<>();
+        connectDB();
+        try {
+            stmt = conn.createStatement();
+            String sql = "select * from CorteAlbum join Completo using (NombreAlbum) where NumerodeLista=" + numeroDeCorte + " group by NombreAlbum order by Posicion asc ";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                int numerodeListaumerodeLista = rs.getInt("NumerodeLista");
+                int posicion = rs.getInt("Posicion");
+                String nombreArtista = rs.getString("NombreArtista");
+                String tituloAlbum = rs.getString("NombreAlbum");
+                String fechaInicio = (rs.getDate("FechaInico")).toString();
+                String fechaFinal = (rs.getDate("FechaFinal")).toString();
+                int vecesQueHaAparecido = rs.getInt("VecesQueHaAparecido");
+                int posicionAnterior = rs.getInt("PosicionAnterior");
+                reportesDeAlbumes.add(new ReporteAlbum(numerodeListaumerodeLista, new Album(tituloAlbum), new Artista(nombreArtista), posicion, posicionAnterior, vecesQueHaAparecido, fechaInicio, fechaFinal));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return reportesDeAlbumes;
     }
 }
