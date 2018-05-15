@@ -1,6 +1,7 @@
 package Run;
 
 import Administradores.AdminReporteAlbum;
+import Administradores.AdminReporteSencillo;
 import DAOS.*;
 import Modelo.*;
 
@@ -28,8 +29,10 @@ public class main {
 //        }
         DAOCanciones daoCanciones=new DAOCanciones();
         List<Cancion> cancions=daoCanciones.ListaCanciones();
-        for(int i=0;i<cancions.size();i++){
-            System.out.println(cancions.get(i).getTitulo());
-        }
+//        for(int i=0;i<cancions.size();i++){
+//            System.out.println(cancions.get(i).getTitulo());
+//        }
+        AdminReporteSencillo adminReporteSencillo=new AdminReporteSencillo();
+        adminReporteSencillo.listarAlbumesReporte(0);
     }
 }
