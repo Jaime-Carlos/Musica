@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="804.0" style="-fx-background-color: #aed581;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReporteVentaPorAlbumController">
     <children>
-      <JFXListView layoutX="522.0" layoutY="16.0" prefHeight="402.0" prefWidth="268.0" />
+      <JFXListView fx:id="vistaSencillos" layoutX="522.0" layoutY="16.0" prefHeight="402.0" prefWidth="268.0" />
       <JFXButton fx:id="buscarReportes" buttonType="RAISED" layoutX="14.0" layoutY="271.0" onAction="#buscarReportesOnAction" prefHeight="48.0" prefWidth="474.0" style="-fx-background-color: #7cb342;" text="Generar Reporte" textFill="WHITE">
          <font>
             <Font size="15.0" />
@@ -23,6 +23,6 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
          </font>
       </Label>
-      <JFXComboBox focusColor="#7cb342" layoutX="13.0" layoutY="124.0" prefHeight="31.0" prefWidth="474.0" promptText="Seleccione el Albúm" style="-fx-prompt-text-fill: #ffffff; -fx-font-size: 15px;" unFocusColor="#7cb342" />
+      <JFXComboBox fx:id="album" focusColor="#7cb342" layoutX="13.0" layoutY="124.0" prefHeight="31.0" prefWidth="474.0" promptText="Seleccione el Albúm" style="-fx-prompt-text-fill: #ffffff; -fx-font-size: 15px;" unFocusColor="#7cb342" />
     </children>
 </AnchorPane>
