@@ -12,12 +12,12 @@
         <URL value="@/styles/Styles.css" />
     </stylesheets>
    <children>
-      <JFXComboBox focusColor="#7cb342" layoutX="180.0" layoutY="70.0" promptText="Elija la lista correspondiente" style="-fx-prompt-text-fill: #ffffff; -fx-font-size: 15px;" stylesheets="@../styles/Styles.css" unFocusColor="#7cb342" />
+      <JFXComboBox fx:id="numeroDeReporte" onAction="#generarVistaDeCorte" focusColor="#7cb342" layoutX="180.0" layoutY="70.0" promptText="Elija la lista correspondiente" style="-fx-prompt-text-fill: #ffffff; -fx-font-size: 15px;" stylesheets="@../styles/Styles.css" unFocusColor="#7cb342" />
       <Label layoutX="152.0" layoutY="14.0" prefHeight="44.0" prefWidth="295.0" text="Reporte Lista De Sencillos" textFill="WHITE" textOverrun="CLIP">
          <font>
             <Font name="Tw Cen MT Condensed Extra Bold" size="27.0" />
          </font>
       </Label>
-      <JFXListView layoutX="29.0" layoutY="127.0" prefHeight="248.0" prefWidth="542.0" />
+      <JFXListView fx:id="reporte" layoutX="29.0" layoutY="127.0" prefHeight="248.0" prefWidth="542.0" />
    </children>
 </AnchorPane>

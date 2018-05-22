@@ -43,4 +43,8 @@ public class AdminReporteSencillo {
     public void reportePorDefecto(List<ReporteSencillo> reporteSencillos, String fechaFinal) {
         reporteSencillos.add(new ReporteSencillo(daoReporteSencillo.ultimoNumerodeCorte() + 1, new Cancion(""), new Artista(""), 0, 0, 0, daoReporteSencillo.fechaFinCorteAnterior(), fechaFinal));
     }
+    public int numeroDeReportes(){
+        int cantidadDeReportes=daoReporteSencillo.ultimoNumerodeCorte();
+        return cantidadDeReportes;
+    }
 }
