@@ -83,7 +83,7 @@ public class ReportesMenuController implements Initializable {
     
     @FXML
     private void ventasEnAlbumOnAction(ActionEvent event) throws IOException{
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/Scene.fxml"));
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/ReporteVentaPorAlbum.fxml"));
         Scene home_scene_page = new Scene(home_page_parent);
         Stage app_stage = new Stage();
         Stage main_app = (Stage) ((Node) event.getSource()).getScene().getWindow();

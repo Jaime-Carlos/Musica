@@ -14,14 +14,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class FXMLController implements Initializable {
+public class ReporteVentaPorAlbumController implements Initializable {
     
     @FXML
     private Label label;
-    
     @FXML
     private JFXButton buscarReportes;
-    
     @FXML
     private JFXDatePicker fechaInicio;
     @FXML
