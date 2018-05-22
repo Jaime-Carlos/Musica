@@ -5,7 +5,6 @@
  */
 package Controller;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,15 +24,15 @@ import javafx.stage.Stage;
  *
  * @author james
  */
-public class MainWindowController implements Initializable {
+public class ReportesMenuController implements Initializable {
 
     /**
      * Initializes the controller class.
-     */ 
+     */
     
     @FXML
-    private void registrarAlbumOnAction(ActionEvent event)throws IOException {
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/registroAlbum.fxml"));
+    private void sencillosOnAction(ActionEvent event) throws IOException{
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/reporteListaSencillos.fxml"));
         Scene home_scene_page = new Scene(home_page_parent);
         Stage app_stage = new Stage();
         Stage main_app = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -42,32 +41,15 @@ public class MainWindowController implements Initializable {
         app_stage.getIcons().add(new Image("img/mainIcon.png"));
         app_stage.initOwner(main_app);
         app_stage.setResizable(false);
-        app_stage.setTitle("Registro de Venta de Albúm");
-        app_stage.initModality(Modality.APPLICATION_MODAL);
-        app_stage.showAndWait();
-        System.out.println("You clicked registrar album!");
-    }
-    
-    @FXML
-    private void registrarCancionOnAction(ActionEvent event) throws IOException {
-         Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/registroCancion.fxml"));
-        Scene home_scene_page = new Scene(home_page_parent);
-        Stage app_stage = new Stage();
-        Stage main_app = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        //(Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(home_scene_page);
-        app_stage.getIcons().add(new Image("img/mainIcon.png"));
-        app_stage.initOwner(main_app);
-        app_stage.setResizable(false);
-        app_stage.setTitle("Registro de Venta de Canción");
+        app_stage.setTitle("Reporte Ventas - Sencillos");
         app_stage.initModality(Modality.APPLICATION_MODAL);
         app_stage.showAndWait();
     }
     
     @FXML
-    private void crearCierreOnAction(ActionEvent event) throws IOException{
-        System.out.println("You clicked registrar cierre!");
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/crearCierre.fxml"));
+    private void albumsOnAction(ActionEvent event)throws IOException{
+        System.out.println("Lista de albumes");
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/reporteListaAlbums.fxml"));
         Scene home_scene_page = new Scene(home_page_parent);
         Stage app_stage = new Stage();
         Stage main_app = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -76,14 +58,15 @@ public class MainWindowController implements Initializable {
         app_stage.getIcons().add(new Image("img/mainIcon.png"));
         app_stage.initOwner(main_app);
         app_stage.setResizable(false);
-        app_stage.setTitle("Generar Fecha de Corte");
+        app_stage.setTitle("Reporte de Venta - Albums vendidos por Interprete");
         app_stage.initModality(Modality.APPLICATION_MODAL);
         app_stage.showAndWait();
+        
     }
     
     @FXML
-    private void reportesOnAction(ActionEvent event) throws IOException {
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/reportesMenu.fxml"));
+    private void interpreteOnAction(ActionEvent event) throws IOException{
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/reporteVentaPorInterprete.fxml"));
         Scene home_scene_page = new Scene(home_page_parent);
         Stage app_stage = new Stage();
         Stage main_app = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -92,7 +75,24 @@ public class MainWindowController implements Initializable {
         app_stage.getIcons().add(new Image("img/mainIcon.png"));
         app_stage.initOwner(main_app);
         app_stage.setResizable(false);
-        app_stage.setTitle("Tipos de Reportes");
+        app_stage.setTitle("Reporte de Venta - Albums vendidos por Interprete");
+        app_stage.initModality(Modality.APPLICATION_MODAL);
+        app_stage.showAndWait();
+        System.out.println("Interprete On Action");
+    }
+    
+    @FXML
+    private void ventasEnAlbumOnAction(ActionEvent event) throws IOException{
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../Vista/Scene.fxml"));
+        Scene home_scene_page = new Scene(home_page_parent);
+        Stage app_stage = new Stage();
+        Stage main_app = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        //(Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(home_scene_page);
+        app_stage.getIcons().add(new Image("img/mainIcon.png"));
+        app_stage.initOwner(main_app);
+        app_stage.setResizable(false);
+        app_stage.setTitle("Reporte de Venta - Canciones en Albúm");
         app_stage.initModality(Modality.APPLICATION_MODAL);
         app_stage.showAndWait();
     }
@@ -100,5 +100,6 @@ public class MainWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }   
+    }    
+    
 }

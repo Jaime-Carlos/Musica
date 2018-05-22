@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="418.0" style="-fx-background-color: #aed581;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="Controller.ReportesMenuController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="69.0" layoutY="22.0" prefHeight="82.0" prefWidth="280.0" text="Menú de Reportes" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="17.0" layoutY="187.0" onAction="#albumsOnAction" prefHeight="48.0" prefWidth="384.0" style="-fx-background-color: #7cb342;" text="Albúms" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="117.0" onAction="#sencillosOnAction" prefHeight="48.0" prefWidth="384.0" style="-fx-background-color: #7cb342;" text="Sencillos" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="17.0" layoutY="259.0" onAction="#interpreteOnAction" prefHeight="48.0" prefWidth="384.0" style="-fx-background-color: #7cb342;" text="Interprete" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="328.0" onAction="#ventasEnAlbumOnAction" prefHeight="48.0" prefWidth="384.0" style="-fx-background-color: #7cb342;" text="Ventas en Albúm" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
