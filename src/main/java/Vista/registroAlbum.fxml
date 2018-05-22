@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="284.0" style="-fx-background-color: #aed581;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="Controller.RegistroAlbumController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="21.0" layoutY="14.0" prefHeight="82.0" prefWidth="242.0" text="Venta de Albúm" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="96.0" prefHeight="58.0" prefWidth="165.0" text="Albúm A Vender:" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXComboBox focusColor="#7cb342" layoutX="36.0" layoutY="154.0" prefHeight="26.0" prefWidth="210.0" promptText="Seleccione un Albúm" style="-fx-prompt-text-fill: #ffffff;" unFocusColor="#7cb342" />
+      <Label layoutX="43.0" layoutY="191.0" prefHeight="58.0" prefWidth="196.0" text="Número de Albúms:" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinner" layoutX="31.0" layoutY="249.0" prefHeight="26.0" prefWidth="220.0" />
+      <JFXDatePicker defaultColor="#7cb342" layoutX="32.0" layoutY="296.0" prefHeight="28.0" prefWidth="220.0" promptText="Fecha de Venta" stylesheets="@../styles/Styles.css" />
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="358.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Efectuar Venta" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.button {
+    -fx-font-weight: bold;
+}
+.jfx-date-picker .jfx-text-field{
+    -jfx-unfocus-color: #7cb342;
+    -fx-prompt-text-fill: #ffffff;
+    -fx-text-fill: #ffffff;
+}
+

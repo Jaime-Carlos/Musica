@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="362.0" prefWidth="452.0" style="-fx-background-color: #aed581;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="Controller.CrearCierreController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="79.0" layoutY="32.0" prefHeight="82.0" prefWidth="293.0" text="Generación de Corte:" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="121.0" layoutY="284.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Cierre con Albúms" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="120.0" layoutY="215.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Cierre con Sencillos" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker defaultColor="#7cb342" layoutX="116.0" layoutY="153.0" prefHeight="28.0" prefWidth="220.0" promptText="Fecha de Corte" stylesheets="@../styles/Styles.css" />
+   </children>
+</AnchorPane>
