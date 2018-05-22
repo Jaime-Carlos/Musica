@@ -47,4 +47,7 @@ public class AdminReporteSencillo {
         int cantidadDeReportes=daoReporteSencillo.ultimoNumerodeCorte();
         return cantidadDeReportes;
     }
+    public String fechaDelAnteriorCorte(){
+        return daoReporteSencillo.fechaFinCorteAnterior();
+    }
 }

@@ -49,4 +49,7 @@ public class AdminReporteAlbum {
         int cantidadDeReportes=daoReporteAlbum.ultimoNumerodeCorte();
         return cantidadDeReportes;
     }
+    public String fechaDelAnteriorCorte(){
+        return daoReporteAlbum.FechaFinCorteAnterior();
+    }
 }

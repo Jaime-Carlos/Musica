@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/MusicaDB" beforeDir="false" afterPath="$PROJECT_DIR$/MusicaDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/RegistroCancionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/RegistroCancionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vista/registroCancion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vista/registroCancion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,7 +80,7 @@
       <file leaf-file-name="registroAlbum.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Vista/registroAlbum.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="561">
               <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="42" />
             </state>
           </provider>
@@ -90,7 +90,7 @@
       <file leaf-file-name="registroCancion.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Vista/registroCancion.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="578">
               <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
             </state>
           </provider>
@@ -100,17 +100,56 @@
       <file leaf-file-name="RegistroCancionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/RegistroCancionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="68" column="75" lean-forward="true" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+            <state relative-caret-position="765">
+              <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistroAlbumController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistroAlbumController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/RegistroAlbumController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminRegistroVentasAlbum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminRegistroVentasAlbum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#289#290#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminReporteAlbum.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+              <folding>
+                <element signature="e#2373#2374#0" expanded="true" />
+                <element signature="e#2438#2439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminReporteSencillo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+              <folding>
+                <element signature="e#2468#2469#0" expanded="true" />
+                <element signature="e#2510#2511#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,7 +207,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/CrearCierreController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Vista/crearCierre.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java" />
         <option value="$PROJECT_DIR$/src/main/java/Vista/reporteListaAlbums.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/ReporteListaAlbumsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/DAOS/DAOReporteAlbum.java" />
@@ -182,13 +220,14 @@
         <option value="$PROJECT_DIR$/src/main/java/Modelo/ReporteporAlbumporSencillo.java" />
         <option value="$PROJECT_DIR$/src/main/java/DAOS/DAOReporteporAlbumdeSencillo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/ReporteVentaPorAlbumController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Vista/reporteListaSencillos.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/ReporteListaSencillosController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Vista/registroAlbum.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/RegistroAlbumController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/RegistroCancionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Vista/registroCancion.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java" />
       </list>
     </option>
   </component>
@@ -242,7 +281,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -265,6 +303,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,15 +335,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Musica" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Musica" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Vista" type="462c0819:PsiDirectoryNode" />
+              <item name="Administradores" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -517,7 +548,8 @@
       <workItem from="1526983861065" duration="1482000" />
       <workItem from="1526985951267" duration="5713000" />
       <workItem from="1526994259667" duration="28000" />
-      <workItem from="1526994476117" duration="9305000" />
+      <workItem from="1526994476117" duration="9444000" />
+      <workItem from="1527004060424" duration="165000" />
     </task>
     <servers />
   </component>
@@ -554,15 +586,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62358000" />
+    <option name="totallyTimeSpent" value="62662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
@@ -570,11 +601,11 @@
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992163" visible="true" weight="0.3019802" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3250825" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992163" weight="0.3019802" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3250825" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.57002455" visible="true" weight="0.3168693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57002455" visible="true" weight="0.32142857" />
       <window_info anchor="right" id="Database" order="4" weight="0.32978722" />
       <window_info anchor="right" id="SciView" order="9" />
       <window_info id="Structure" order="1" sideWeight="0.42997542" side_tool="true" weight="0.2667173" />
@@ -584,6 +615,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.42997542" side_tool="true" weight="0.2667173" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
       <window_info anchor="right" id="JetGradle" order="5" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -781,16 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding>
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -813,10 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="14" selection-start-line="14" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="method#connectDB#0;class#DAOAlbum#0" />
-            <element signature="method#listarAlbumes#0;class#DAOAlbum#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,10 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#connectDB#0;class#DAOArtista#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,11 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="19" column="116" selection-start-line="19" selection-start-column="116" selection-end-line="19" selection-end-column="116" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#listarReporte#0;class#DAOReporteporAlbumdeSencillo#0" />
-            <element signature="method#connectDB#0;class#DAOReporteporAlbumdeSencillo#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,11 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="14" selection-start-line="14" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#listarReporte#0;class#DAOReporteInterprete#0" />
-            <element signature="method#connectDB#0;class#DAOReporteInterprete#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -884,16 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -908,20 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="47" column="4" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -954,17 +934,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminRegistroVentasAlbum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/ReporteListaSencillosController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -984,7 +953,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Vista/registroAlbum.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
+        <state relative-caret-position="561">
           <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="42" />
         </state>
       </provider>
@@ -992,7 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Vista/registroCancion.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="578">
           <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
         </state>
       </provider>
@@ -1000,15 +969,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/RegistroCancionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="68" column="75" lean-forward="true" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+        <state relative-caret-position="765">
+          <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/RegistroAlbumController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminRegistroVentasAlbum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminReporteSencillo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#2468#2469#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Administradores/AdminReporteAlbum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="e#2373#2374#0" expanded="true" />
+            <element signature="e#2438#2439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
