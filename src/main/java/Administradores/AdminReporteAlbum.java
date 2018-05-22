@@ -43,4 +43,10 @@ public class AdminReporteAlbum {
     public void reportePorDefecto(List<ReporteAlbum> reporteAlbums, String fechaFinal) {
         reporteAlbums.add(new ReporteAlbum(daoReporteAlbum.ultimoNumerodeCorte() + 1, new Album(""), new Artista(""), 0, 0, 0, daoReporteAlbum.FechaFinCorteAnterior(), fechaFinal));
     }
+
+    //Numero de Cortes
+    public int numeroDeReportes(){
+        int cantidadDeReportes=daoReporteAlbum.ultimoNumerodeCorte();
+        return cantidadDeReportes;
+    }
 }

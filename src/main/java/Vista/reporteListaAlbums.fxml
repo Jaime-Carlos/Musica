@@ -17,7 +17,7 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="27.0" />
          </font>
       </Label>
-      <JFXComboBox focusColor="#7cb342" layoutX="181.0" layoutY="66.0" promptText="Elija la lista correspondiente" style="-fx-prompt-text-fill: #ffffff; -fx-font-size: 15px;" stylesheets="@../styles/Styles.css" unFocusColor="#7cb342" />
-      <JFXListView layoutX="29.0" layoutY="130.0" prefHeight="248.0" prefWidth="542.0" />
+      <JFXComboBox onAction="#generarVistaDeCorte" fx:id="numeroDeReporte" focusColor="#7cb342" layoutX="181.0" layoutY="66.0" promptText="Elija la lista correspondiente" style="-fx-prompt-text-fill: #ffffff; -fx-font-size: 15px;" stylesheets="@../styles/Styles.css" unFocusColor="#7cb342" />
+      <JFXListView fx:id="reporte" layoutX="29.0" layoutY="130.0" prefHeight="248.0" prefWidth="542.0" />
    </children>
 </AnchorPane>
