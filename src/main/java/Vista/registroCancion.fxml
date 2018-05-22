@@ -30,9 +30,9 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
          </font>
       </Label>
-      <JFXComboBox focusColor="#7cb342" layoutX="41.0" layoutY="154.0" prefHeight="26.0" prefWidth="210.0" promptText="Seleccione una Canción" style="-fx-prompt-text-fill: #ffffff;" unFocusColor="#7cb342" />
-      <JFXDatePicker defaultColor="#7cb342" layoutX="36.0" layoutY="307.0" prefHeight="28.0" prefWidth="220.0" promptText="Fecha de Venta" stylesheets="@../styles/Styles.css" />
-      <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="355.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Efectuar Venta" textFill="WHITE">
+      <JFXComboBox fx:id="sencillo" focusColor="#7cb342" layoutX="41.0" layoutY="154.0" prefHeight="26.0" prefWidth="210.0" promptText="Seleccione una Canción" style="-fx-prompt-text-fill: #ffffff;" unFocusColor="#7cb342" />
+      <JFXDatePicker fx:id="fechaDeCompra" defaultColor="#7cb342" layoutX="36.0" layoutY="307.0" prefHeight="28.0" prefWidth="220.0" promptText="Fecha de Venta" stylesheets="@../styles/Styles.css" />
+      <JFXButton onAction="#generarVenta" buttonType="RAISED" layoutX="42.0" layoutY="355.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Efectuar Venta" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
