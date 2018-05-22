@@ -17,16 +17,16 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="121.0" layoutY="284.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Cierre con Albúms" textFill="WHITE">
+      <JFXButton fx:id="cierreAlbum" onAction="#generarCierreAlbum" buttonType="RAISED" layoutX="121.0" layoutY="284.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Cierre con Albúms" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="120.0" layoutY="215.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Cierre con Sencillos" textFill="WHITE">
+      <JFXButton fx:id="cierreSencillo" onAction="#genearCierreSencillo" buttonType="RAISED" layoutX="120.0" layoutY="215.0" prefHeight="48.0" prefWidth="210.0" style="-fx-background-color: #7cb342;" text="Cierre con Sencillos" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXDatePicker defaultColor="#7cb342" layoutX="116.0" layoutY="153.0" prefHeight="28.0" prefWidth="220.0" promptText="Fecha de Corte" stylesheets="@../styles/Styles.css" />
+      <JFXDatePicker fx:id="fechaCorte" defaultColor="#7cb342" layoutX="116.0" layoutY="153.0" prefHeight="28.0" prefWidth="220.0" promptText="Fecha de Corte" stylesheets="@../styles/Styles.css" />
    </children>
 </AnchorPane>
