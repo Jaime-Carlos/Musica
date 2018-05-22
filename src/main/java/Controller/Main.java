@@ -51,8 +51,8 @@ public class Main extends Application {
         });
         
         
-        //scene.getStylesheets().add("/styles/Styles.css");
-       // stage.getIcons().add(new Image("/img/mainIcon.png"));
+        scene.getStylesheets().add("/styles/Styles.css");
+        stage.getIcons().add(new Image("/img/mainIcon.png"));
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Music App!");
         stage.setResizable(false);
