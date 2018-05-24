@@ -18,6 +18,7 @@ import Modelo.Cancion;
 import Modelo.VentasSencillo;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
+import java.sql.Date;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -68,4 +69,5 @@ public class RegistroCancionController implements Initializable {
         Cancion tituloCancion=new Cancion(sencillo.getValue().toString());
         adminRegistroVentaSencillo.registrarVentasSencillo(new VentasSencillo(numeroDeVentas,tituloCancion,fecha));
     }
+    
 }

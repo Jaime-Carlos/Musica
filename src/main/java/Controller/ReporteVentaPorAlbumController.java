@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Administradores.AdminReporteAlbum;
 import DAOS.DAOAlbum;
 import DAOS.DAOReporteporAlbumdeSencillo;
 import Modelo.Album;
@@ -19,8 +20,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.sql.Date;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.scene.control.Alert;
 
 public class ReporteVentaPorAlbumController implements Initializable {
 
@@ -42,7 +45,10 @@ public class ReporteVentaPorAlbumController implements Initializable {
         System.out.println("Accion buscar reportes");
         System.out.println("DATE PICKER INFO INICIO:" + fechaInicio.getValue());
         System.out.println("DATE PICKER INFO CIERRE:" + fechaCierre.getValue());
-        //FORMAT: Year/Month/Day
+        boolean flag;
+        flag=alerta(fechaInicio.getValue().toString(),fechaCierre.getValue().toString());
+        if(flag){
+            //FORMAT: Year/Month/Day
         vistaSencillos.getItems().clear();
         DAOReporteporAlbumdeSencillo daoReporteporAlbumdeSencillo=new DAOReporteporAlbumdeSencillo();
         List<ReporteporAlbumporSencillo> reporte= daoReporteporAlbumdeSencillo.listarReporte(fechaInicio.getValue().toString(),fechaCierre.getValue().toString(),album.getValue().toString());
@@ -52,6 +58,13 @@ public class ReporteVentaPorAlbumController implements Initializable {
             vistaSencillos.getItems().add("Titulo del Album: "+tituloCancion+
                     " Ventas: "+totalidadVentas);
 
+        }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Fecha");
+            alert.setHeaderText("Error en las fechas!");
+            alert.setContentText("Selecciona unas fechas válidas.");
+            alert.showAndWait();
         }
     }
 
@@ -70,5 +83,16 @@ public class ReporteVentaPorAlbumController implements Initializable {
             album.getItems().add(albumes.get(i).getTitulo());
         }
     }
+    
+    public boolean alerta(String fechaInicio, String fechaFinal) {
+        
+        if (Date.valueOf(fechaInicio).before(Date.valueOf(fechaFinal))) {
+            return true;
+        }
+        return false;
+    }
+    
+    
+
 }
 
