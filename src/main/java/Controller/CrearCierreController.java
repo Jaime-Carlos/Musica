@@ -41,6 +41,7 @@ public class CrearCierreController implements Initializable {
     @FXML
     public void generarCierreAlbum(ActionEvent event) {
         boolean flag = alertaAlbum(fechaCorte.getValue().toString());
+        System.out.println(flag);
         if (flag) {
             AdminReporteAlbum adminReporteAlbum = new AdminReporteAlbum();
             adminReporteAlbum.generarReporte(fechaCorte.getValue().toString());
@@ -57,6 +58,7 @@ public class CrearCierreController implements Initializable {
     @FXML
     public void genearCierreSencillo(ActionEvent event) {
         boolean flag = alertaSencillo(fechaCorte.getValue().toString());
+        System.out.println(flag);
         if (flag) {
             AdminReporteSencillo adminReporteSencillo = new AdminReporteSencillo();
             adminReporteSencillo.generarReporte(fechaCorte.getValue().toString());
@@ -65,7 +67,6 @@ public class CrearCierreController implements Initializable {
             alert.setTitle("Error Fecha de Corte");
             alert.setHeaderText("Error en la fecha!");
             alert.setContentText("Selecciona una fecha válida.");
-
             alert.showAndWait();
         }
     }
@@ -77,7 +78,7 @@ public class CrearCierreController implements Initializable {
 
     public boolean alertaSencillo(String fecha) {
         AdminReporteSencillo adminReporteSencillo = new AdminReporteSencillo();
-        if (Date.valueOf(fecha).before(Date.valueOf(adminReporteSencillo.fechaDelAnteriorCorte()))) {
+        if (Date.valueOf(fecha).after(Date.valueOf(adminReporteSencillo.fechaDelAnteriorCorte()))) {
             return true;
         }
         return false;
@@ -85,7 +86,7 @@ public class CrearCierreController implements Initializable {
 
     public boolean alertaAlbum(String fecha) {
         AdminReporteAlbum adminReporteAlbum = new AdminReporteAlbum();
-        if (Date.valueOf(fecha).before(Date.valueOf(adminReporteAlbum.fechaDelAnteriorCorte()))) {
+        if (Date.valueOf(fecha).after(Date.valueOf(adminReporteAlbum.fechaDelAnteriorCorte()))) {
             return true;
         }
         return false;
